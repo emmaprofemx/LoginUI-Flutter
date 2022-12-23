@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:loginui/components/my_button.dart';
 import 'package:loginui/my_textfield.dart';
 
 class LoginPage extends StatelessWidget {
@@ -22,12 +23,13 @@ final passwordController = TextEditingController();
               Icon(Icons.lock,
               size: 100,
               ),
-              const SizedBox(height: 50),//welcome back 
-              Text('Bienvenido de vuelta' , 
+              const SizedBox(height: 50),
+              //welcome back 
+              Text('Bienvenido de vuelta, ha pasado tiempo' , 
               style: TextStyle
               (
                 color: Colors.grey[700],
-                fontSize: 30,
+                fontSize: 16,
                 ),
               ) ,   
               const SizedBox(height: 25),
@@ -43,6 +45,23 @@ final passwordController = TextEditingController();
                 controller: passwordController,
                 hintText: 'Password',
                 obscureText: true,),
+                //Olvidaste la contraseña?
+                const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        '¿Olvistaste tu contraseña?' , 
+                        style: TextStyle(color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 25),
+              //Botton de iniciar sesion
+              MyButton(),
             ],
           ),
         ),
