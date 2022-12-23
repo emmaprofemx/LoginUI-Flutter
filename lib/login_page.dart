@@ -1,3 +1,5 @@
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -19,7 +21,7 @@ void signUserIn(){}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -112,9 +114,25 @@ void signUserIn(){}
                 //Imagen de apple
                 SqueareTild(imagePath: 'lib/images/apple.png')
               ], 
-              )
-
-
+              ),
+              //Espacio entre la etiqueta y los botones
+              const SizedBox(height: 50),
+            //Aun no eres miembro? Registrate ahora
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('¿Aun no eres miembro?'),
+                const SizedBox(width: 4),
+                Text(
+                  'Registrate ahora' ,
+                  style: TextStyle(
+                    color: Colors.blue,
+                    //Propiedad para que sea en negrita
+                    fontWeight: FontWeight.bold
+                  ), 
+                )
+              ],
+            ),
 
 
 
