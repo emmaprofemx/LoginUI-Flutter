@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -13,7 +14,17 @@ class SqueareTild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Image.asset(imagePath),
+      padding: EdgeInsets.all(20),
+      //Creamos el margen para el boton , le modificamos el color al marco
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white),
+        //Le damos un borde al boton
+        borderRadius: BorderRadius.circular(16),
+        //Rellenamos la caja con el siguiente color
+        color: Colors.grey[200]),
+      child: Image.asset(
+      imagePath,
+      height: 40,),
     );
   }
 }

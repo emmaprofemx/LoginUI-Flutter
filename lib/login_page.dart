@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:loginui/components/my_button.dart';
+import 'package:loginui/components/square_tile.dart';
 import 'package:loginui/my_textfield.dart';
 
 class LoginPage extends StatelessWidget {
@@ -96,12 +97,20 @@ void signUserIn(){}
                   ],
                 ),
               ),
-
+              //Espacio entre la etiqueta y los botones
+              const SizedBox(height: 50),
               //google + apple sign in icons buttons
               Row(
-              children: [
-                Image.asset('lib/images/google.png',
-                height: 80,),
+                //Alineamos las imagenes en el centro
+              mainAxisAlignment: MainAxisAlignment.center,
+              //La palabra const means que nunca cambiara ese apartado
+              children: const [
+                //Imagen de google
+                SqueareTild(imagePath: 'lib/images/google.png'),
+                //Hacemos la separacion de las imagenes , agregando un sizedBox en medio
+                const SizedBox(width: 25),
+                //Imagen de apple
+                SqueareTild(imagePath: 'lib/images/apple.png')
               ], 
               )
 
