@@ -4,11 +4,15 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton({super.key});
+
+  final Function()? onTap;
+  const MyButton({super.key , required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector( 
+      onTap: onTap,
+      child: Container(
       padding: EdgeInsets.all(25),
       margin: EdgeInsets.symmetric(horizontal: 25),
       decoration: BoxDecoration(
@@ -25,6 +29,8 @@ class MyButton extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ),
+    ) ;
+  
   }
 }

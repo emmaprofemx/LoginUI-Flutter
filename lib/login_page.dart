@@ -10,6 +10,11 @@ LoginPage({super.key});
 //text editing controllers
 final usernameController = TextEditingController();
 final passwordController = TextEditingController();
+
+//Creando metodo para mandar a la pantalla principal
+void signUserIn(){}
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +66,52 @@ final passwordController = TextEditingController();
                 ),
                 const SizedBox(height: 25),
               //Botton de iniciar sesion
-              MyButton(),
+              MyButton(
+                onTap: signUserIn,
+              ),
+              const SizedBox(height: 25),
+              //o continuar con 
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    //Linea izquierda
+                    Expanded(
+                    child: Divider(thickness: 0.5,
+                    color: Colors.grey[400],)
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Continua con' , 
+                        style: TextStyle(color: Colors.grey[700]),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[400],
+                    ),
+                    ),
+                  ],
+                ),
+              ),
+
+              //google + apple sign in icons buttons
+              Row(
+              children: [
+                Image.asset('lib/images/google.png',
+                height: 80,),
+              ], 
+              )
+
+
+
+
+
+
+
+
             ],
           ),
         ),
