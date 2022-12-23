@@ -40,7 +40,7 @@ final passwordController = TextEditingController();
               const SizedBox(height: 10),
               //password textfield
               MyTextField( 
-                controller: usernameController,
+                controller: passwordController,
                 hintText: 'Password',
                 obscureText: true,),
             ],
