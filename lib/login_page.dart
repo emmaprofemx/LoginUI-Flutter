@@ -12,26 +12,25 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            children: [
-              SizedBox(height: 50),
-
-              //Logo
+          children: [
+          const SizedBox(height: 50),
+            //Logo
               Icon(Icons.lock,
               size: 100,
               ),
-              SizedBox(height: 50),
-
-              //welcome back
-              //campo de nombre de usuario
-              //campo para password
-              //olvidaste tu contra?
-              //boton para ingresar
-              //iniciar sesion con
-              //google + apple sign in buttons
-              //not a member? register now
+              const SizedBox(height: 50),//welcome back 
+              Text('Bienvenido de vuelta' , 
+              style: TextStyle
+              (
+                color: Colors.grey[700],
+                fontSize: 30,
+                ),
+              ) ,   
+              const SizedBox(height: 25),
             ],
           ),
-        )),
+        ),
+        ),
     );
   }
 }
