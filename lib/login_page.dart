@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:loginui/my_textfield.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -27,6 +28,11 @@ class LoginPage extends StatelessWidget {
                 ),
               ) ,   
               const SizedBox(height: 25),
+              //username textfield
+              MyTextField(),
+              const SizedBox(height: 10),
+              //password textfield
+              MyTextField(),
             ],
           ),
         ),
