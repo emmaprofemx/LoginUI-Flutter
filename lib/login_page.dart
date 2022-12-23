@@ -4,8 +4,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:loginui/my_textfield.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+LoginPage({super.key});
 
+//text editing controllers
+final usernameController = TextEditingController();
+final passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,10 +32,17 @@ class LoginPage extends StatelessWidget {
               ) ,   
               const SizedBox(height: 25),
               //username textfield
-              MyTextField(),
+              MyTextField(
+                controller: usernameController,
+                hintText: 'Username',
+                obscureText: false,
+              ),
               const SizedBox(height: 10),
               //password textfield
-              MyTextField(),
+              MyTextField( 
+                controller: usernameController,
+                hintText: 'Password',
+                obscureText: true,),
             ],
           ),
         ),
