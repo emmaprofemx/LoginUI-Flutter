@@ -87,7 +87,8 @@ void signUserIn(){}
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         'Continua con' , 
-                        style: TextStyle(color: Colors.grey[700]),
+                        style: TextStyle(color: Colors.grey[700],
+                        fontSize: 15),
                       ),
                     ),
                     Expanded(
@@ -100,7 +101,7 @@ void signUserIn(){}
                 ),
               ),
               //Espacio entre la etiqueta y los botones
-              const SizedBox(height: 50),
+              const SizedBox(height: 28),
               //google + apple sign in icons buttons
               Row(
                 //Alineamos las imagenes en el centro

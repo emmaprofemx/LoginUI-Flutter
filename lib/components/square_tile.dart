@@ -14,7 +14,8 @@ class SqueareTild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      //Propiedad para darle tamaño al boton
+      padding: EdgeInsets.all(30),
       //Creamos el margen para el boton , le modificamos el color al marco
       decoration: BoxDecoration(
         border: Border.all(color: Colors.white),
