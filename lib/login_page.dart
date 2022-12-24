@@ -21,23 +21,31 @@ void signUserIn(){}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Center(
           child: Column(
           children: [
-          const SizedBox(height: 50),
+          //Separador entre cabecera y logo
+          const SizedBox(height: 35),
             //Logo
+            //Reemplazando Icono por logo
+            /*
               Icon(Icons.lock,
               size: 100,
               ),
-              const SizedBox(height: 50),
+              */
+              Image.asset('lib/images/rayitosfondo.png',
+              height: 145),
+              const SizedBox(height: 16),
               //welcome back 
-              Text('Bienvenido de vuelta, ha pasado tiempo' , 
+              Text('Bienvenido a Rayitos' , 
               style: TextStyle
               (
                 color: Colors.grey[700],
-                fontSize: 16,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
                 ),
               ) ,   
               const SizedBox(height: 25),
@@ -86,9 +94,8 @@ void signUserIn(){}
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Continua con' , 
-                        style: TextStyle(color: Colors.grey[700],
-                        fontSize: 15),
+                        'Continuar con' , 
+                        style: TextStyle(color: Colors.grey[700]),
                       ),
                     ),
                     Expanded(
@@ -101,7 +108,7 @@ void signUserIn(){}
                 ),
               ),
               //Espacio entre la etiqueta y los botones
-              const SizedBox(height: 28),
+              const SizedBox(height: 35),
               //google + apple sign in icons buttons
               Row(
                 //Alineamos las imagenes en el centro
@@ -122,7 +129,8 @@ void signUserIn(){}
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('¿Aun no eres miembro?'),
+                Text('¿Aún no eres miembro?'),
+                //Separador
                 const SizedBox(width: 4),
                 Text(
                   'Registrate ahora' ,
@@ -134,12 +142,7 @@ void signUserIn(){}
                 )
               ],
             ),
-
-
-
-
-
-
+            //Fin del cuerpo de la app
             ],
           ),
         ),
