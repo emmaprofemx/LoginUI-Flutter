@@ -1,6 +1,6 @@
 # Login UI in Flutter
 
-A new Flutter project.
+Realizacion de una ventana de inico de sesion hecha en Flutter aplicando el conocimiento adquirido viendo la documentacion oficial y videos de youtube
 
 ## Getting Started
 
